@@ -89,4 +89,20 @@
     <servlet-name>addCanti</servlet-name>
     <url-pattern>/actualizarCantidad</url-pattern>
     </servlet-mapping>
+   <servlet>
+    <servlet-name>listarFac</servlet-name>
+    <servlet-class>egph.controlador.CrearFactura</servlet-class>
+   </servlet>
+    <servlet-mapping>
+    <servlet-name>listarFac</servlet-name>
+    <url-pattern>/getFacturas</url-pattern>
+    </servlet-mapping>
+    <servlet>
+    <servlet-name>modiFac</servlet-name>
+    <servlet-class>egph.controlador.CrearFactura</servlet-class>
+   </servlet>
+    <servlet-mapping>
+    <servlet-name>modiFac</servlet-name>
+    <url-pattern>/modificarFactura</url-pattern>
+    </servlet-mapping>
 </web-app>

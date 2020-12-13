@@ -156,4 +156,27 @@ public class CajeraDao {
         return result;
     }
     
+    public ResultSet getFacturas() throws ClassNotFoundException, SQLException {
+    	
+   	 String SQL = "select * from factura";
+   	
+   	
+
+   	        Class.forName("com.mysql.jdbc.Driver");
+
+   	        Connection connection = DriverManager
+   	            .getConnection("jdbc:mysql://localhost:3306/egph_kanurkar_garrido", "root", "");
+
+   	            // Step 2:Create a statement using connection object
+   	            PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+   	            
+                 
+   	        	
+   	            System.out.println(preparedStatement);
+   	            
+   	             ResultSet rs =preparedStatement.executeQuery(SQL);
+   	             
+   	              return rs;
+   	          }
+    
 }

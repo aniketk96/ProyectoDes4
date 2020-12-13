@@ -62,5 +62,56 @@ public class CrearFactura extends HttpServlet {
 
         
 	}
+	
+	public void doGet(HttpServletRequest req,HttpServletResponse res) throws IOException {
+		
+	     try {
+	           ResultSet rs=cajeraDao.getFacturas();
+	           PrintWriter out=res.getWriter();
+	           int idRs,cantidadRs,idCRs;
+	           String nameRs,nameCRs,productoRs;
+	           float precioRs,totalRs;
+	           out.println("<div>");
+              out.println("<table>");
+              out.println("<tr>");
+              out.println("<th>Id</th>");
+              out.println("<th>Id Cajera</th>");
+              out.println("<th>Nombre Cliente</th>");
+              out.println("<th>Producto</th>");
+              out.println("<th>Cantidad</th>");
+              out.println("<th>Precio</th>");
+              out.println("<th>total</th>");
+	          while(rs.next()){
+	               //Retrieve by column name
+	                idRs  = rs.getInt("id");
+	               idCRs = rs.getInt("id_cajera");
+	               nameCRs = rs.getString("nombre_cajera");
+	               nameRs = rs.getString("nombre_cliente");
+	               productoRs = rs.getString("producto");
+	               cantidadRs = rs.getInt("cantidad");
+	               precioRs = rs.getFloat("precio");
+	               totalRs = rs.getFloat("total");
+	               
+                
+	               //Display values
+	           
+	               out.println("<tr>");
+	               out.println("<td>"+idRs+"</td>");
+	               out.println("<td>"+idCRs+"</td>");
+	               out.println("<td>"+nameCRs+"</td>");
+	               out.println("<td>"+nameRs+"</td>");
+	               out.println("<td>"+productoRs+"</td>");
+	               out.println("<td>"+cantidadRs+"</td>");
+	               out.println("<td>"+precioRs+"</td>");
+	               out.println("<td>"+totalRs+"</td>");
+	            }
+	           out.println("</div>" );
+	        	   
+	        } catch (Exception e) {
+	            // TODO Auto-generated catch block
+	            e.printStackTrace();
+	            System.out.print("error");
+	        }
+	}
 
 }

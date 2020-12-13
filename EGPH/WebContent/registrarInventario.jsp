@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+     <%String name=(String)session.getAttribute("uname");
+if(name!=null){%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -17,3 +19,5 @@
 </form>
 </body>
 </html>
+<%}else{response.sendRedirect(request.getContextPath()+"/login.jsp");
+}%>
