@@ -19,6 +19,7 @@ hola <%=session.getAttribute("iname") %>
 <form action="<%=request.getContextPath()%>/addProductos.jsp">
 <input type="submit" value="Agragar Cantidades">
 </form>
+<a href="<%=request.getContextPath()%>/logoutInventario.jsp">Logout</a>
 </body>
 </html>
 <%}else{response.sendRedirect(request.getContextPath()+"/loginInventario.jsp");

@@ -21,6 +21,7 @@ holaa <%=session.getAttribute("cname") %>
 <form action="<%=request.getContextPath()%>/modificarFacturas.jsp">
 <input type="submit" value="Modificar Facturas!">
 </form>
+<a href="<%=request.getContextPath()%>/logoutCajera.jsp">Logout</a>
 </body>
 </html>
 <%}else{response.sendRedirect(request.getContextPath()+"/loginCajera.jsp");

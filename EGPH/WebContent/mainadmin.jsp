@@ -17,6 +17,25 @@ hola <%=name %>
 <form action="<%=request.getContextPath() %>/registrarInventario.jsp">
 <input type="submit" value="Registrar Inventario">
 </form>
+<form action="<%=request.getContextPath()%>/crearFactura.jsp">
+<input type="submit" value="Crear Factura!">
+</form>
+<form action="<%=request.getContextPath()%>/getFacturas">
+<input type="submit" value="Ver Facturas!">
+</form>
+<form action="<%=request.getContextPath()%>/modificarFacturas.jsp">
+<input type="submit" value="Modificar Facturas!">
+</form>
+<form action="<%=request.getContextPath()%>/crearProducto.jsp">
+<input type="submit" value="Crar Producto!">
+</form>
+<form action="<%=request.getContextPath()%>/getProductos">
+<input type="submit" value="Ver Producto">
+</form>
+<form action="<%=request.getContextPath()%>/addProductos.jsp">
+<input type="submit" value="Agragar Cantidades">
+</form>
+<a href="<%=request.getContextPath()%>/logoutAdmin.jsp">Logout</a>
 </body>
 </html>
 <%}else{response.sendRedirect(request.getContextPath()+"/login.jsp");
