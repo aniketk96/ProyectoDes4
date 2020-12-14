@@ -99,7 +99,7 @@
     </servlet-mapping>
     <servlet>
     <servlet-name>modiFac</servlet-name>
-    <servlet-class>egph.controlador.CrearFactura</servlet-class>
+    <servlet-class>egph.controlador.ActualizarFactura</servlet-class>
    </servlet>
     <servlet-mapping>
     <servlet-name>modiFac</servlet-name>

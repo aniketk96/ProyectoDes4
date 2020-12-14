@@ -56,7 +56,7 @@ public class CrearProducto extends HttpServlet {
 	           String nameRs;
 	           float precioRs;
 	           out.println("<div>");
-               out.println("<table>");
+               out.println("<table border='1'>");
                out.println("<tr>");
                out.println("<th>Id</th>");
                out.println("<th>Nombre</th>");
@@ -77,7 +77,7 @@ public class CrearProducto extends HttpServlet {
 	               out.println("<td>"+nameRs+"</td>");
 	               out.println("<td>"+precioRs+"</td>");
 	               out.println("<td>"+cantidadRs+"</td>");
-	             
+	               out.println("</tr>");
 	            }
 	           out.println("</div>" );
 	        	   

@@ -180,5 +180,34 @@ public class CajeraDao {
    	             
    	              return rs;
    	          }
+    public int actualizarFacturas(Factura cj,double total,int cod) throws ClassNotFoundException, SQLException {
+    	
+      	 String SQL = "update factura set id_cajera="+cj.getId_cajera()+" , nombre_cajera='"+cj.getNombre_cajera()+"' ,nombre_cliente='"+cj.getNombre_cliente()+"' , producto='"+cj.getProducto()+"', cantidad="+cj.getCantidad()+", precio="+cj.getPrecio()+", total="+total+" where id="+cod+"";
+      	 
+      	   int result=0;
+
+      	        Class.forName("com.mysql.jdbc.Driver");
+
+      	        Connection connection = DriverManager
+      	            .getConnection("jdbc:mysql://localhost:3306/egph_kanurkar_garrido", "root", "");
+
+ 
+      	      PreparedStatement preparedStatement = connection.prepareStatement(SQL);
+      	          
+      	          /*    preparedStatement.setInt(1, cj.getId_cajera());
+      	              preparedStatement.setString(2, cj.getNombre_cajera());
+      	              preparedStatement.setString(3, cj.getNombre_cliente());
+      	              preparedStatement.setString(4, cj.getProducto());
+      	              preparedStatement.setInt(5, cj.getCantidad());
+      	              preparedStatement.setFloat(6, cj.getPrecio());
+      	            preparedStatement.setDouble(7, total);
+      	              */
+      	        	
+      	            System.out.println(preparedStatement);
+      	    
+      	             result =preparedStatement.executeUpdate(SQL);
+      	             
+      	           return result;   
+      	          }
     
 }

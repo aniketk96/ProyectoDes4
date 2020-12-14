@@ -25,7 +25,7 @@ if(name!=null){%>
 <h5>Precio</h5>
 <input type="text" name="precio"><br>
 <br><br>
-<input type="submit" value="Crear">
+<input type="submit" value="Actualizar">
 </form>
 </body>
 </html>

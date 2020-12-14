@@ -72,10 +72,11 @@ public class CrearFactura extends HttpServlet {
 	           String nameRs,nameCRs,productoRs;
 	           float precioRs,totalRs;
 	           out.println("<div>");
-              out.println("<table>");
+              out.println("<table border='1'>");
               out.println("<tr>");
               out.println("<th>Id</th>");
               out.println("<th>Id Cajera</th>");
+              out.println("<th>Nombre Cajera</th>");
               out.println("<th>Nombre Cliente</th>");
               out.println("<th>Producto</th>");
               out.println("<th>Cantidad</th>");
